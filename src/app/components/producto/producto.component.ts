@@ -11,6 +11,7 @@ export class ProductoComponent {
 
   producto:any = undefined;
   cod:string = undefined;
+  cargando:boolean = true;
 
   constructor(private route:ActivatedRoute,
               private _ps:ProductosService) {
@@ -21,12 +22,14 @@ export class ProductoComponent {
 
           _ps.cargar_producto( parametros['id'] )
                   .subscribe( res=> {
+                    this.cargando = false
                     this.producto = res.json();
                     this.cod = parametros['id'];
-                    console.log(this.producto);
-                  })
+                    // console.log(this.producto);
+                  });
 
-      })
+      });
+
 
   }
 
