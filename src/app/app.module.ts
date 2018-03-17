@@ -18,6 +18,7 @@ import { PortafolioComponent } from './components/portafolio/portafolio.componen
 import { AboutComponent } from './components/about/about.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { SearchComponent } from './components/search/search.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SearchComponent } from './components/search/search.component';
     PortafolioComponent,
     AboutComponent,
     ProductoComponent,
-    SearchComponent
+    SearchComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,

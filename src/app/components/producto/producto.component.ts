@@ -9,23 +9,21 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class ProductoComponent {
 
-  producto:any = undefined;
-  cod:string = undefined;
-  cargando:boolean = true;
+  producto: any = undefined;
+  cod: string = undefined;
+  cargando = true;
 
-  constructor(private route:ActivatedRoute,
-              private _ps:ProductosService) {
+  constructor(private route: ActivatedRoute,
+              private _ps: ProductosService) {
 
-      route.params.subscribe(parametros =>{
-          // console.log( parametros);
-          // console.log( parametros['id']);
+      route.params.subscribe(parametros => {
 
           _ps.cargar_producto( parametros['id'] )
-                  .subscribe( res=> {
-                    this.cargando = false
+                  .subscribe( res => {
+                    this.cargando = false;
                     this.producto = res.json();
                     this.cod = parametros['id'];
-                    // console.log(this.producto);
+                    console.log(this.producto);
                   });
 
       });
