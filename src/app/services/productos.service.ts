@@ -5,8 +5,8 @@ import { Http } from '@angular/http';
 export class ProductosService {
 
   productos: any[]= [];
-  productos_filtrado: any[]=[];
-  cargando: boolean = true;
+  productos_filtrado: any[] = [];
+  cargando = true;
 
   constructor(private http: Http) {
 
@@ -42,7 +42,6 @@ export class ProductosService {
         if (prod.categoria.indexOf( termino ) >= 0 || prod.titulo.toLowerCase().indexOf( termino ) >= 0 ) {
             this.productos_filtrado.push( prod );
         }
-        //  console.log(prod);
      });
    }
 
