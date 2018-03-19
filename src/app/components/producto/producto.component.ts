@@ -23,7 +23,6 @@ export class ProductoComponent {
                     this.cargando = false;
                     this.producto = res.json();
                     this.cod = parametros['id'];
-                    console.log(this.producto);
                   });
 
       });

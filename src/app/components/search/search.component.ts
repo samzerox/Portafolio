@@ -9,11 +9,11 @@ import { ProductosService } from '../../services/productos.service';
 })
 export class SearchComponent {
 
-  termino:string = undefined;
+  termino: string = undefined;
 
-  constructor( public route:ActivatedRoute,
-                public _ps:ProductosService) {
-      route.params.subscribe( parametros=>{
+  constructor( public route: ActivatedRoute,
+                public _ps: ProductosService) {
+      route.params.subscribe( parametros => {
           this.termino = parametros['termino'];
           // console.log(this.termino);
 
